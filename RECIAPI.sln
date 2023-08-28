@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34003.232
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RECIAPI", "RECIAPI\RECIAPI.csproj", "{F6B545A7-598C-4A85-8CD8-A406A2F4E65B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F6B545A7-598C-4A85-8CD8-A406A2F4E65B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6B545A7-598C-4A85-8CD8-A406A2F4E65B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6B545A7-598C-4A85-8CD8-A406A2F4E65B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6B545A7-598C-4A85-8CD8-A406A2F4E65B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D1965A5A-3AF1-4A2A-9E67-5E84D4B8278D}
+	EndGlobalSection
+EndGlobal
