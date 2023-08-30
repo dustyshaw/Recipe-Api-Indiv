@@ -1,0 +1,10 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+
+@server = https://localhost:7048
+
+POST {{server}}/recipe
+Content-Type: application/json
+
+{
+  
+}

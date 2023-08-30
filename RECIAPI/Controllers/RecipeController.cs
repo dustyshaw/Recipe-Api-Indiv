@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using RECIAPI.Data;
 
 namespace RECIAPI.Controllers;
 
@@ -7,10 +8,12 @@ namespace RECIAPI.Controllers;
 public class RecipeController : ControllerBase
 {
     private readonly ILogger<RecipeController> _logger;
+    private readonly IDataStore _dataStore;
     private static List<Recipe> _recipes = new();
 
-    public RecipeController(ILogger<RecipeController> logger)
+    public RecipeController(ILogger<RecipeController> logger, IDataStore dataStore)
     {
+        _dataStore = dataStore;
         _logger = logger;
         _recipes = new();
     }
@@ -19,32 +22,24 @@ public class RecipeController : ControllerBase
     public IEnumerable<Recipe> Get()
     {
         return _recipes;
+        //return datStore.GetAllRecipes();
     }
 
     [HttpGet("{id}")]       // get recipe by ID
     public Recipe Get(int id)
     {
-        return _recipes[id];
+        //return dataStore.GetRecipe();
+        throw new NotImplementedException();
     }
 
     [HttpPost]
     public Recipe Post(Recipe recipe)
     {
         // recipe.Id = _recipe.count
-        //_recipes.Add(recipe)
-        //return recipe;
+        //var newRecipe = dataStore.Add(recipe)
+        //return newRecipe;
         throw new NotImplementedException();    
     }
 }
 
 
-public class Recipe
-{
-    public List<Ingredient> Ingredients { get; set; }
-}
-
-
-public class Ingredient
-{
-    // name quantity unit
-}
