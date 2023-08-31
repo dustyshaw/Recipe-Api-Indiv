@@ -6,5 +6,13 @@ POST {{server}}/recipe
 Content-Type: application/json
 
 {
-  
+  name: "",
+  instructions: "",
+  ingredients:
+    {
+        name: "flour",
+        unit: "cup",
+        ammount: "240"
+    },
+
 }

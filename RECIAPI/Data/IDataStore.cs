@@ -3,6 +3,8 @@
 public interface IDataStore
 {
     Recipe AddRecipe(Recipe recipe);
+    // remove studnet
+    //get student
     Recipe UpdateRecipe(Recipe recipe);
 }
 
