@@ -2,25 +2,47 @@
 
 public interface IDataStore
 {
-    Recipe AddRecipe(Recipe recipe);
+    Task<IEnumerable<Recipe>> GetAllRecipes();
+    Task<Recipe> GetRecipe(int id);
+    Task<Recipe> AddRecipe(Recipe recipe);
     // remove studnet
     //get student
-    Recipe UpdateRecipe(Recipe recipe);
+    Task<Recipe> UpdateRecipe(Recipe recipe);
+    Task DeleteRecipe(int id);
 }
 
-public class InMemoryDataStore :IDataStore
+public class InMemoryDataStore : IDataStore
 {
     private List<Recipe> recipes = new List<Recipe>();
-    public Recipe AddRecipe(Recipe recipe)
+
+    public Task DeleteRecipe(int id)
     {
-        return recipe;
+        throw new NotImplementedException();
     }
 
-    public Recipe UpdateRecipe(Recipe recipe)
+    public Task<Recipe> GetRecipe(int id)
     {
-        return recipe;
+        throw new NotImplementedException();
+    }
+
+    Task<Recipe> IDataStore.AddRecipe(Recipe recipe)
+    {
+        // recipe.ID = recipes.count
+        recipes.Add(recipe);
+        return Task.FromResult(recipe);
+    }
+
+    Task<IEnumerable<Recipe>> IDataStore.GetAllRecipes()
+    {
+        throw new NotImplementedException();
+    }
+
+    Task<Recipe> IDataStore.UpdateRecipe(Recipe recipe)
+    {
+        throw new NotImplementedException();
     }
 }
+
 
 
 public class Recipe

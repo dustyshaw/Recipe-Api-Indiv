@@ -9,7 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddSingleton<IDataStore, InMemoryDataStore>(); // make one instance and it's going to be used rest of program
+builder.Services.AddSingleton<IDataStore, JsonDataStore>(); // make one instance and it's going to be used rest of program
 
 builder.Services.AddCors(options =>
 {
