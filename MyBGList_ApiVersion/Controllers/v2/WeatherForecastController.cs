@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace RECIAPI.Controllers
+namespace MyBGList_ApiVersion.Controllers.v1
 {
     [ApiController]
     [Route("[controller]")]
