@@ -26,19 +26,18 @@ public class RecipeController : ControllerBase
     }
 
     [HttpGet("{id}")]       // get recipe by ID
-    public Recipe Get(int id)
+    public async Task<Recipe> Get(int id)
     {
         //return dataStore.GetRecipe();
         throw new NotImplementedException();
     }
 
     [HttpPost]
-    public Recipe Post(Recipe recipe)
+    public async Task<Recipe> Post([FromBody] Recipe recipe)
     {
         // recipe.Id = _recipe.count
-        //var newRecipe = dataStore.Add(recipe)
-        //return newRecipe;
-        throw new NotImplementedException();    
+        var newRecipe = await _dataStore.AddRecipe(recipe);
+        return newRecipe;
     }
 }
 

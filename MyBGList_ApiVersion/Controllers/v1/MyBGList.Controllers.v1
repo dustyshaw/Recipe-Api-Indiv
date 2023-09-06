@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using RECIAPI.Data;
 
-namespace RECIAPI.Controllers
+namespace MyBGList_ApiVersion.Controllers.v1
 {
     [ApiController]
     [Route("[controller]")]
@@ -17,7 +16,7 @@ namespace RECIAPI.Controllers
         public WeatherForecastController(ILogger<WeatherForecastController> logger)
         {
             _logger = logger;
-        } 
+        }
 
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
