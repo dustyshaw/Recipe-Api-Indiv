@@ -21,6 +21,6 @@ namespace RECIAPI.Models
         [Required]
         public IEnumerable<Ingredient> Ingredients { get; set; }
 
-        public ICollection<Recipes_domains>? Recipees_Domains { get; set; }
+        public ICollection<Recipes_domains>? Recipes_domains { get; set; }
     }
 }
