@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using RECIAPI.Data;
 
 namespace RECIAPI.Controllers
 {
@@ -16,7 +17,7 @@ namespace RECIAPI.Controllers
         public WeatherForecastController(ILogger<WeatherForecastController> logger, IDataStore dataStore)
         {
             _logger = logger;
-        }
+        } 
 
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
