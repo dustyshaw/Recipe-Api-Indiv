@@ -37,7 +37,7 @@ public class JsonDataStore : IDataStore
 
     public Task<IEnumerable<Recipe>> GetAllRecipes()
     {
-        return recipes;
+        throw new NotImplementedException();
     }
 
     public Task<Recipe> GetRecipe(int id)
